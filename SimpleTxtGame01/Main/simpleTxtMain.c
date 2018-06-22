@@ -10,10 +10,6 @@
 /* - Game will also implement structs and linked lists to replicate "movement" between dungeons   */
 /****************************************      FLAMEL      ****************************************/
 
-// The game will function on reading and writing .txt files.
-// Game will also implement structs and linked lists to replicate "movement" between dungeons or areas
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -88,19 +84,24 @@ void gameStart(void){
 void loadSave(void){
     char name[MAX_NAME_LENGTH];
     char save[MAX_NAME_LENGTH];
+    int  saveCheck = 0;
     
     FILE *fp;
     
-    scanf("%s", name);
-    strcpy(save,name);
-    strcat(save,".txt");
-    fp = fopen(save,"r");
-    
-    if(fp == NULL){
-        printf("File does not exist.\n");
-    }
-    else{
-        printf("Welcome back %s.\n", name);
+    while(saveCheck == 0){
+        printf("Please enter your character name.\n");
+        scanf("%s", name);
+        strcpy(save,name);
+        strcat(save,".txt");
+        fp = fopen(save,"r");
+        
+        if(fp == NULL){
+            printf("File does not exist.\n");
+        }
+        else{
+            printf("Welcome back %s.\n", name);
+            saveCheck = 1;
+        }
     }
 }
 
@@ -120,7 +121,7 @@ int characterCreation(void){
     FILE *fp;
     fp = fopen("charCreation.txt", "r");
     
-    
+    //Read the character creation file
     while(1){
         c = fgetc(fp);
         if(feof(fp)){
@@ -162,7 +163,6 @@ int characterCreation(void){
     
     return 0;
 }
-
 
 
 // function which prints out from a loop to clear the screen between game phases.
