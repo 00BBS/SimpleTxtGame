@@ -84,6 +84,7 @@ void gameStart(void){
 void loadSave(void){
     char name[MAX_NAME_LENGTH];
     char save[MAX_NAME_LENGTH];
+    char start[YES_NO];
     int  saveCheck = 0;
     
     FILE *fp;
@@ -96,7 +97,14 @@ void loadSave(void){
         fp = fopen(save,"r");
         
         if(fp == NULL){
-            printf("File does not exist.\n");
+            printf("File does not exist.\nDo you want to try again (Y) or return to the main menu (N)?\n");
+            scanf("%s", start);
+            if(strcmp(start,"N") == 0 || strcmp(start,"n") == 0){
+                gameStart();
+            }
+            else if(strcmp(start,"Y") == 0 || strcmp(start,"y") == 0){
+                loadSave();
+            }
         }
         else{
             printf("Welcome back %s.\n", name);
