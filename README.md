@@ -1,12 +1,14 @@
 # SimpleTxtGame
-This is a simple RPG text game which is being created using C.
+This is a simple RPG text game which is being created using C and is run in console.
 
 Core concepts involved:
   - Reading and writing .txt files
   - Use of linked lists to represent movement around dungeons.
 
 Installing procedure:
-
+  - Download files from SimpleTxtGame01, this includes the story folder with .txt files and the simpleTxtMain.c and its header file.
+  - Compile.
+  - Run.
 
 Version list:
 v0.0.1:
