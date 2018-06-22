@@ -15,12 +15,15 @@
 #include <string.h>
 #include "simpleTxtMain.h"
 
-void gameStart(void);
+void menu(void);
 void intro(char start[]);
-int characterCreation(void);
+int  characterCreation(void);
 void fileCreate(void);
 void loadSave(void);
 void loadingLoop(void);
+void instructions(void);
+void readFile(char *name);
+
 
 int main(int argc, const char * argv[]) {
     
@@ -30,25 +33,18 @@ int main(int argc, const char * argv[]) {
     
     int gameSave = 0;
     if(gameSave == 0){
-        gameStart();
+        menu();
     }
     
     return 0;
 }
 
-// Function that checks for player information at the beginning of the game.
-// If the player has a save file, search for the file and read it to continue the game.
-// Otherwise send the player to the character creation menu.
-void gameStart(void){
-    int  newGame = 0;
-    int c;
-    
-    char start[YES_NO];
-    
+// Function which reads the contents of a .txt file until EOF and prints it out in console.
+void readFile(char *name){
     FILE *fp;
-    fp = fopen("intro.txt", "r");
+    int c = 0;
     
-    // Ask if the user is willing to start a new game, otherwise ask them to enter the name of their save file
+    fp = fopen(name, "r");
     while(1){
         c = fgetc(fp);
         if(feof(fp)){
@@ -57,7 +53,20 @@ void gameStart(void){
         printf("%c", c);
     }
     fclose(fp);
+}
+
+// Function that checks for player information at the beginning of the game.
+// If the player has a save file, search for the file and read it to continue the game.
+// Otherwise send the player to the character creation menu.
+void menu(void){
+    int  newGame = 0;
     
+    char start[YES_NO];
+    char *fileName = "intro.txt";
+    
+    readFile(fileName);
+    
+    // Ask if the user is willing to start a new game, otherwise ask them to enter the name of their save file
     while(newGame == 0){
         scanf("%s", start);
         
@@ -86,7 +95,6 @@ void loadSave(void){
     char save[MAX_NAME_LENGTH];
     char start[YES_NO];
     int  saveCheck = 0;
-    int  c = 0;
     
     FILE *fp;
     // ask the player to enter their character name to open the save file
@@ -101,24 +109,18 @@ void loadSave(void){
             printf("File does not exist.\nDo you want to try again (Y) or return to the main menu (N)?\n");
             scanf("%s", start);
             if(strcmp(start,"N") == 0 || strcmp(start,"n") == 0){
-                gameStart();
+                menu();
             }
             else if(strcmp(start,"Y") == 0 || strcmp(start,"y") == 0){
                 loadSave();
             }
         }
         else{
+            saveCheck = 1;
+            loadingLoop();
             printf("Welcome back %s.\nWe will continue from your save file.\n", name);
             // print out the contents of the file (TEST).
-            while(1){
-                c = fgetc(fp);
-                if(feof(fp)){
-                    break;
-                }
-                printf("%c", c);
-            }
-            fclose(fp);
-            saveCheck = 1;
+            readFile(save);
         }
     }
 }
@@ -129,25 +131,17 @@ void loadSave(void){
 int characterCreation(void){
     char name[MAX_NAME_LENGTH];
     char save[MAX_NAME_LENGTH];
+    char *charCreation = "charCreation.txt";
     char genderQ[YES_NO];
     char gender[] = "placeholder";
     char honorific[] = "placeholder";
     
+    int health = MAX_HEALTH;
     int qFlag = 0;
-    int c;
     
     FILE *fp;
-    fp = fopen("charCreation.txt", "r");
     
-    //Read the character creation file
-    while(1){
-        c = fgetc(fp);
-        if(feof(fp)){
-            break;
-        }
-        printf("%c", c);
-    }
-    fclose(fp);
+    readFile(charCreation);
  
     // create a function for gender check
     while(qFlag == 0){
@@ -179,7 +173,8 @@ int characterCreation(void){
     fp = fopen(save,"w");
     
     // save the players name within the file.
-    fprintf(fp,"NAME: %s", name);
+    fprintf(fp,"NAME: %s\n", name);
+    fprintf(fp,"HEALTH: %d\n", health);
     printf("Well %s, are you ready to step into the STG world? Too late. You don't have a choice :)\n", name);
     
     return 0;

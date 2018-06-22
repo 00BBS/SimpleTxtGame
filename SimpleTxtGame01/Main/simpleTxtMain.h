@@ -12,6 +12,7 @@
 #define MAX_NAME_LENGTH 64
 #define YES_NO          1
 #define LOADING_LOOP    25
+#define MAX_HEALTH      100
 
 
 // Health - The amount of health the player has left. Cannot be less than 0.
