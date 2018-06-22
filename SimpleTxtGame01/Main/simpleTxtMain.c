@@ -86,11 +86,12 @@ void loadSave(void){
     char save[MAX_NAME_LENGTH];
     char start[YES_NO];
     int  saveCheck = 0;
+    int  c = 0;
     
     FILE *fp;
-    
+    // ask the player to enter their character name to open the save file
+    printf("Please enter your character name.\n");
     while(saveCheck == 0){
-        printf("Please enter your character name.\n");
         scanf("%s", name);
         strcpy(save,name);
         strcat(save,".txt");
@@ -107,7 +108,16 @@ void loadSave(void){
             }
         }
         else{
-            printf("Welcome back %s.\n", name);
+            printf("Welcome back %s.\nWe will continue from your save file.\n", name);
+            // print out the contents of the file (TEST).
+            while(1){
+                c = fgetc(fp);
+                if(feof(fp)){
+                    break;
+                }
+                printf("%c", c);
+            }
+            fclose(fp);
             saveCheck = 1;
         }
     }
@@ -158,15 +168,18 @@ int characterCreation(void){
         }
     }
     
-    // change the honorific depending on gender
+    // change the honorific depending on gender.
     printf("Ah... a %s, I see! Sorry for such a silly question.\n", gender);
     printf("Now then %s, could I also get your name?\n", honorific);
     
+    // scan the players name into a string, and append the name with ".txt" to create a text file.
     scanf("%s", name);
     strcpy(save,name);
     strcat(save,".txt");
     fp = fopen(save,"w");
     
+    // save the players name within the file.
+    fprintf(fp,"NAME: %s", name);
     printf("Well %s, are you ready to step into the STG world? Too late. You don't have a choice :)\n", name);
     
     return 0;
