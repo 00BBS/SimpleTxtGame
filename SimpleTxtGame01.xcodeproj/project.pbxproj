@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DAB27F9F20DA5A4B006A4866 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DAB27F9E20DA5A4B006A4866 /* main.c */; };
+		DAB27F9F20DA5A4B006A4866 /* simpleTxtMain.c in Sources */ = {isa = PBXBuildFile; fileRef = DAB27F9E20DA5A4B006A4866 /* simpleTxtMain.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,10 @@
 
 /* Begin PBXFileReference section */
 		DAB27F9B20DA5A4B006A4866 /* SimpleTxtGame01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleTxtGame01; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAB27F9E20DA5A4B006A4866 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		DAB27F9E20DA5A4B006A4866 /* simpleTxtMain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = simpleTxtMain.c; sourceTree = "<group>"; };
+		DAB27FA620DB2E11006A4866 /* simpleTxtMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simpleTxtMain.h; sourceTree = "<group>"; };
+		DAB27FAE20DB4D2F006A4866 /* intro.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = intro.txt; path = "../../../../../Library/Developer/Xcode/DerivedData/SimpleTxtGame01-anghjpujyyrbrocbqcjmrugvyvlf/Build/Products/Debug/intro.txt"; sourceTree = "<group>"; };
+		DAB27FAF20DB4D2F006A4866 /* charCreation.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = charCreation.txt; path = "../../../../../Library/Developer/Xcode/DerivedData/SimpleTxtGame01-anghjpujyyrbrocbqcjmrugvyvlf/Build/Products/Debug/charCreation.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,28 @@
 		DAB27F9D20DA5A4B006A4866 /* SimpleTxtGame01 */ = {
 			isa = PBXGroup;
 			children = (
-				DAB27F9E20DA5A4B006A4866 /* main.c */,
+				DAB27FAD20DB4D14006A4866 /* Story */,
+				DAB27FA720DB34A1006A4866 /* Main */,
 			);
 			path = SimpleTxtGame01;
+			sourceTree = "<group>";
+		};
+		DAB27FA720DB34A1006A4866 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DAB27FA620DB2E11006A4866 /* simpleTxtMain.h */,
+				DAB27F9E20DA5A4B006A4866 /* simpleTxtMain.c */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DAB27FAD20DB4D14006A4866 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				DAB27FAF20DB4D2F006A4866 /* charCreation.txt */,
+				DAB27FAE20DB4D2F006A4866 /* intro.txt */,
+			);
+			path = Story;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB27F9F20DA5A4B006A4866 /* main.c in Sources */,
+				DAB27F9F20DA5A4B006A4866 /* simpleTxtMain.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
