@@ -1,5 +1,6 @@
 # SimpleTxtGame
 This is a simple RPG text game which is being created using C.
+
 Core concepts involved:
   - Reading and writing .txt files
   - Use of linked lists to represent movement around dungeons.
