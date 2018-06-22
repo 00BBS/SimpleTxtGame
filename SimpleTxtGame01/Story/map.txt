@@ -1,0 +1,39 @@
+AREA: Village of Katar
+LOOK: 
+MOVE:
+
+AREA: Beachside
+LOOK:
+MOVE:
+
+AREA: Memorial Bridge
+LOOK:
+MOVE:
+
+AREA: Egor's Mountain
+LOOK:
+MOVE:
+
+AREA:
+LOOK:
+MOVE:
+
+AREA:
+LOOK:
+MOVE:
+
+AREA:
+LOOK:
+MOVE:
+
+AREA:
+LOOK:
+MOVE:
+
+AREA:
+LOOK:
+MOVE:
+
+AREA:
+LOOK:
+MOVE:

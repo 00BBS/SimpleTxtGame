@@ -1,0 +1,5 @@
+Here are the basic commands that you will need to know to traverse the world of STG:
+LOOK: Describes to you the current location that you are in.
+MOVE N/S/E/W: Allows you to move in any direction, north, south, east or west provided that area is not restricted.
+ATTACK: Allows you to attack enemies if you are in combat.
+INVENTORY: Through this you can access your inventory of items on your person.
