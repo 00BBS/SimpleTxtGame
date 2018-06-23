@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DAB27F9F20DA5A4B006A4866 /* simpleTxtMain.c in Sources */ = {isa = PBXBuildFile; fileRef = DAB27F9E20DA5A4B006A4866 /* simpleTxtMain.c */; };
+		DABC84AF20DE073F00ACA205 /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = DABC84AE20DE073F00ACA205 /* player.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,8 @@
 		DAB27FAF20DB4D2F006A4866 /* charCreation.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = charCreation.txt; path = "../../../../../Library/Developer/Xcode/DerivedData/SimpleTxtGame01-anghjpujyyrbrocbqcjmrugvyvlf/Build/Products/Debug/charCreation.txt"; sourceTree = "<group>"; };
 		DABC849820DD10D200ACA205 /* instructions.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = instructions.txt; path = "../../../../../Library/Developer/Xcode/DerivedData/SimpleTxtGame01-anghjpujyyrbrocbqcjmrugvyvlf/Build/Products/Debug/instructions.txt"; sourceTree = "<group>"; };
 		DABC849920DD13F700ACA205 /* map.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = map.txt; path = "../../../../../Library/Developer/Xcode/DerivedData/SimpleTxtGame01-anghjpujyyrbrocbqcjmrugvyvlf/Build/Products/Debug/map.txt"; sourceTree = "<group>"; };
+		DABC84AD20DE073F00ACA205 /* player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
+		DABC84AE20DE073F00ACA205 /* player.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = player.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 			children = (
 				DAB27FA620DB2E11006A4866 /* simpleTxtMain.h */,
 				DAB27F9E20DA5A4B006A4866 /* simpleTxtMain.c */,
+				DABC84AD20DE073F00ACA205 /* player.h */,
+				DABC84AE20DE073F00ACA205 /* player.c */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DABC84AF20DE073F00ACA205 /* player.c in Sources */,
 				DAB27F9F20DA5A4B006A4866 /* simpleTxtMain.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

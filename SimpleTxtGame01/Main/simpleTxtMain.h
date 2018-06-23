@@ -23,21 +23,15 @@ void loadingLoop(void);
 void instruct(void);
 
 
-// Health - The amount of health the player has left. Cannot be less than 0.
-// Money  - The total amount of money the player has left, which they can use to purchase various items.
-// Area   - The current location of the player.
-struct player {
-    float  health;
-    int    money;
-    struct area *area;
-};
-
-struct inventory{
-    
-};
-
+// Name  - Corresponds with AREA in the map.txt file.
+// Desc  - Description of the area, given by LOOK.
 struct area{
-    
+    char   *name;
+    char   *desc;
+    struct area *north;
+    struct area *south;
+    struct area *east;
+    struct area *west;
 };
 
 #endif /* simpleTxtMain_h */

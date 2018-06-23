@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "simpleTxtMain.h"
+#include "player.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -123,6 +124,7 @@ int characterCreation(void){
     
     int health = MAX_HEALTH;
     int qFlag = 0;
+    char c;
     
     FILE *fp;
     
@@ -160,7 +162,15 @@ int characterCreation(void){
     // save the players name within the file.
     fprintf(fp,"NAME: %s\n", name);
     fprintf(fp,"HEALTH: %d\n", health);
-    printf("Well %s, are you ready to step into the STG world? Too late. You don't have a choice :)\n", name);
+    scanf("%c", &c);
+    
+    playerDet(name);
+    
+    printf("Well %s, are you ready to step into the STG world?\nToo late.... you don't have a choice.\n",name);
+    printf("Actually you could probably just type QUIT but oh well.\nPress any key to continue...");
+    scanf("%c", &c);
+    
+    // close the file and continue onto the next phase of the game
     fclose(fp);
     
     loadingLoop();
@@ -184,4 +194,5 @@ void loadingLoop(void){
         printf("Loading...\n");
         i++;
     }
+    printf("\n");
 }
