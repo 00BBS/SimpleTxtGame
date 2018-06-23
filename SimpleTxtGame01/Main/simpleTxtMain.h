@@ -14,6 +14,14 @@
 #define LOADING_LOOP    25
 #define MAX_HEALTH      100
 
+void readFile(char *name);
+void fileCreate(char *name);
+void menu(void);
+int  characterCreation(void);
+void loadSave(void);
+void loadingLoop(void);
+void instruct(void);
+
 
 // Health - The amount of health the player has left. Cannot be less than 0.
 // Money  - The total amount of money the player has left, which they can use to purchase various items.

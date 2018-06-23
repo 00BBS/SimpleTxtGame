@@ -15,26 +15,9 @@
 #include <string.h>
 #include "simpleTxtMain.h"
 
-void menu(void);
-void intro(char start[]);
-int  characterCreation(void);
-void fileCreate(void);
-void loadSave(void);
-void loadingLoop(void);
-void instructions(void);
-void readFile(char *name);
-
-
 int main(int argc, const char * argv[]) {
     
-    // Check if the game has a saved file.
-    // If there exists a saved file and the user wishes to use it, open the file and proceed.
-    // Otherwise we create a new game
-    
-    int gameSave = 0;
-    if(gameSave == 0){
-        menu();
-    }
+    menu();
     
     return 0;
 }
@@ -105,7 +88,7 @@ void loadSave(void){
         strcat(save,".txt");
         fp = fopen(save,"r");
         
-        if(fp == NULL){
+        if(NULL == fp){
             printf("File does not exist.\nDo you want to try again (Y) or return to the main menu (N)?\n");
             scanf("%s", start);
             if(strcmp(start,"N") == 0 || strcmp(start,"n") == 0){
@@ -121,6 +104,7 @@ void loadSave(void){
             printf("Welcome back %s.\nWe will continue from your save file.\n", name);
             // print out the contents of the file (TEST).
             readFile(save);
+            instruct();
         }
     }
 }
@@ -132,6 +116,7 @@ int characterCreation(void){
     char name[MAX_NAME_LENGTH];
     char save[MAX_NAME_LENGTH];
     char *charCreation = "charCreation.txt";
+   
     char genderQ[YES_NO];
     char gender[] = "placeholder";
     char honorific[] = "placeholder";
@@ -142,7 +127,7 @@ int characterCreation(void){
     FILE *fp;
     
     readFile(charCreation);
- 
+
     // create a function for gender check
     while(qFlag == 0){
         scanf("%s", genderQ);
@@ -176,8 +161,18 @@ int characterCreation(void){
     fprintf(fp,"NAME: %s\n", name);
     fprintf(fp,"HEALTH: %d\n", health);
     printf("Well %s, are you ready to step into the STG world? Too late. You don't have a choice :)\n", name);
+    fclose(fp);
+    
+    loadingLoop();
+    instruct();
     
     return 0;
+}
+
+// instructions phase of the game
+void instruct(void){
+    char *instructions = "instructions.txt";
+    readFile(instructions);
 }
 
 
