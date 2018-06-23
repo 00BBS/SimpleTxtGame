@@ -21,3 +21,6 @@ v0.0.2:
 
 Created in:
   - xCode 9
+
+Planned Updates:
+  - Implementing ASCII art
