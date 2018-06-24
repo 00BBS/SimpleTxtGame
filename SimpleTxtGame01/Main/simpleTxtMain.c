@@ -27,16 +27,20 @@ int main(int argc, const char * argv[]) {
 void readFile(char *name){
     FILE *fp;
     int c = 0;
-    
     fp = fopen(name, "r");
-    while(1){
-        c = fgetc(fp);
-        if(feof(fp)){
-            break;
-        }
-        printf("%c", c);
+    if(fp == NULL){
+        printf("Cannot open file!\n");
     }
-    fclose(fp);
+    else{
+        while(1){
+            c = fgetc(fp);
+            if(feof(fp)){
+                break;
+            }
+            printf("%c", c);
+        }
+        fclose(fp);
+    }
 }
 
 // Function that checks for player information at the beginning of the game.
@@ -44,11 +48,15 @@ void readFile(char *name){
 // Otherwise send the player to the character creation menu.
 void menu(void){
     int  newGame = 0;
+    char c;
     
     char start[YES_NO];
-    char *fileName = "intro.txt";
+    char *intro = "intro.txt";
+    char *menu  = "menuGFX.txt";
     
-    readFile(fileName);
+    readFile(menu);
+    scanf("%c", &c);
+    readFile(intro);
     
     // Ask if the user is willing to start a new game, otherwise ask them to enter the name of their save file
     while(newGame == 0){

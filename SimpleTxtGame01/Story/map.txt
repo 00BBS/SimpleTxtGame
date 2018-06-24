@@ -1,5 +1,9 @@
+AREA: The Ruins of Sora
+LOOK:
+MOVE:
+
 AREA: Village of Katar
-LOOK: 
+LOOK:
 MOVE:
 
 AREA: Beachside
@@ -14,11 +18,11 @@ AREA: Egor's Mountain
 LOOK:
 MOVE:
 
-AREA:
+AREA: Forest of Solace
 LOOK:
 MOVE:
 
-AREA:
+AREA: Temple of Ra
 LOOK:
 MOVE:
 

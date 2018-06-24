@@ -12,5 +12,29 @@
 #include "player.h"
 #include "simpleTxtMain.h"
 
+
+void playerPrint(struct character *p);
+
+// need to implement class selection
+// Function which assigns all details of the character in both a struct and a .txt file
 void playerDet(char *playerName){
+    struct character *p = malloc(sizeof(struct character));
+    strcpy(p->name, playerName);
+    p->health = MAX_HEALTH;
+    p->money  = STARTING_CASH;
 }
+
+void playerPrint(struct character *p){
+    printf("NAME:   %s\n", p->name);
+    printf("HEALTH: %lf\n", p->health);
+    printf("MONEY:  %dn", p->money);
+    
+}
+
+
+void playerAction(void){
+    
+}
+
+
+

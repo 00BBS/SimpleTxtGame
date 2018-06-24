@@ -13,22 +13,33 @@
 
 #define MAX_NAME_LENGTH 64
 #define MAX_HEALTH      100
-
+#define STARTING_CASH   1000
 
 
 void playerDet(char *name);
-
+void playerAction(void);
 
 // Health - The amount of health the player has left. Cannot be less than 0.
 // Money  - The total amount of money the player has left, which they can use to purchase various items.
 // Area   - The current location of the player.
-struct character {
-    char   *name;
+
+typedef enum RPGClass{
+    WIZARD,
+    JESTER,
+    KNIGHT,
+    RANGER
+}classType;
+
+
+typedef struct character {
+    char   name[MAX_NAME_LENGTH];
     float  health;
     int    money;
     struct inventory *inventory;
     struct area *area;
-};
+}player;
+
+
 
 
 struct inventory{
