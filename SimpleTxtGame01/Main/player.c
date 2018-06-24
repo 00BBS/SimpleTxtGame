@@ -15,7 +15,16 @@
 
 void playerPrint(struct character *p);
 
-// need to implement class selection
+
+void playerClass(void){
+    char *select = "class.txt";
+    int  c;
+    c = getchar();
+    readFile(select);
+    c = getchar();
+    
+}
+
 // Function which assigns all details of the character in both a struct and a .txt file
 void playerDet(char *playerName){
     struct character *p = malloc(sizeof(struct character));
@@ -24,12 +33,14 @@ void playerDet(char *playerName){
     p->money  = STARTING_CASH;
 }
 
+
+// function which prints out the information of the player to ocnsole.
 void playerPrint(struct character *p){
     printf("NAME:   %s\n", p->name);
     printf("HEALTH: %lf\n", p->health);
-    printf("MONEY:  %dn", p->money);
-    
+    printf("MONEY:  %d gold\n", p->money);
 }
+
 
 
 void playerAction(void){

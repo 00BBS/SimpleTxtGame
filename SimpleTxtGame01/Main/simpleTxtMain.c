@@ -10,6 +10,9 @@
 /* - Game will also implement structs and linked lists to replicate "movement" between dungeons   */
 /****************************************      FLAMEL      ****************************************/
 
+// LCD FONT
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -130,14 +133,12 @@ int characterCreation(void){
     char gender[] = "placeholder";
     char honorific[] = "placeholder";
     
-    int health = MAX_HEALTH;
     int qFlag = 0;
     char c;
     
     FILE *fp;
-    
     readFile(charCreation);
-
+    
     // create a function for gender check
     while(qFlag == 0){
         scanf("%s", genderQ);
@@ -160,26 +161,25 @@ int characterCreation(void){
     // change the honorific depending on gender.
     printf("Ah... a %s, I see! Sorry for such a silly question.\n", gender);
     printf("Now then %s, could I also get your name?\n", honorific);
-    
+
     // scan the players name into a string, and append the name with ".txt" to create a text file.
     scanf("%s", name);
     strcpy(save,name);
     strcat(save,".txt");
     fp = fopen(save,"w");
-    
-    // save the players name within the file.
-    fprintf(fp,"NAME: %s\n", name);
-    fprintf(fp,"HEALTH: %d\n", health);
-    scanf("%c", &c);
-    
-    playerDet(name);
-    
-    printf("Well %s, are you ready to step into the STG world?\nToo late.... you don't have a choice.\n",name);
-    printf("Actually you could probably just type QUIT but oh well.\nPress any key to continue...");
-    scanf("%c", &c);
-    
     // close the file and continue onto the next phase of the game
     fclose(fp);
+    
+    // ask the player to choose their class
+    playerClass();
+    playerDet(name);
+    
+    
+    
+    printf("Well %s, are you ready to step into the STG world?\nToo late.... you don't have a choice.\n",name);
+    printf("Actually you could probably just type QUIT but oh well.\n            Press any key to continue...\n");
+    scanf("%c", &c);
+    
     
     loadingLoop();
     instruct();

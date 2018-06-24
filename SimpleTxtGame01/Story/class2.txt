@@ -1,0 +1,10 @@
+Type in a number to correspond to each class.
+
+JESTER: 1
+WIZARD: 2
+KNIGHT: 3
+RANGER: 4
+
+Keep in mind different classes have their own benefits and flaws. Choose to your own taste.
+
+

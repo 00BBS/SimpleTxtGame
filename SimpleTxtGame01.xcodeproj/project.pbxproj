@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		DAB27F9F20DA5A4B006A4866 /* simpleTxtMain.c in Sources */ = {isa = PBXBuildFile; fileRef = DAB27F9E20DA5A4B006A4866 /* simpleTxtMain.c */; };
 		DABC84AF20DE073F00ACA205 /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = DABC84AE20DE073F00ACA205 /* player.c */; };
-		DABC84CB20DF250F00ACA205 /* charCreation.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = DABC84C720DF244E00ACA205 /* charCreation.txt */; };
-		DABC84CC20DF250F00ACA205 /* instructions.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = DABC84C420DF244E00ACA205 /* instructions.txt */; };
-		DABC84CD20DF250F00ACA205 /* intro.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = DABC84C520DF244E00ACA205 /* intro.txt */; };
-		DABC84CE20DF250F00ACA205 /* map.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = DABC84C620DF244E00ACA205 /* map.txt */; };
-		DABC84CF20DF250F00ACA205 /* menuGFX.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = DABC84C820DF244F00ACA205 /* menuGFX.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,11 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				DABC84CB20DF250F00ACA205 /* charCreation.txt in CopyFiles */,
-				DABC84CC20DF250F00ACA205 /* instructions.txt in CopyFiles */,
-				DABC84CD20DF250F00ACA205 /* intro.txt in CopyFiles */,
-				DABC84CE20DF250F00ACA205 /* map.txt in CopyFiles */,
-				DABC84CF20DF250F00ACA205 /* menuGFX.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,11 +38,13 @@
 		DAB27FA620DB2E11006A4866 /* simpleTxtMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simpleTxtMain.h; sourceTree = "<group>"; };
 		DABC84AD20DE073F00ACA205 /* player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
 		DABC84AE20DE073F00ACA205 /* player.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = player.c; sourceTree = "<group>"; };
-		DABC84C420DF244E00ACA205 /* instructions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instructions.txt; sourceTree = "<group>"; };
-		DABC84C520DF244E00ACA205 /* intro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = intro.txt; sourceTree = "<group>"; };
-		DABC84C620DF244E00ACA205 /* map.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = map.txt; sourceTree = "<group>"; };
-		DABC84C720DF244E00ACA205 /* charCreation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = charCreation.txt; sourceTree = "<group>"; };
-		DABC84C820DF244F00ACA205 /* menuGFX.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = menuGFX.txt; sourceTree = "<group>"; };
+		DABC84E120DF7C3900ACA205 /* intro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = intro.txt; sourceTree = "<group>"; };
+		DABC84E220DF7C3900ACA205 /* instructions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = instructions.txt; sourceTree = "<group>"; };
+		DABC84E320DF7C3900ACA205 /* map.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = map.txt; sourceTree = "<group>"; };
+		DABC84E520DF7C3900ACA205 /* charCreation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = charCreation.txt; sourceTree = "<group>"; };
+		DABC84E620DF7C3900ACA205 /* menuGFX.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = menuGFX.txt; sourceTree = "<group>"; };
+		DABC84E720DF7C3A00ACA205 /* ruins.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ruins.txt; sourceTree = "<group>"; };
+		DABC84E820DF7CD300ACA205 /* class.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = class.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +97,13 @@
 		DAB27FAD20DB4D14006A4866 /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				DABC84C720DF244E00ACA205 /* charCreation.txt */,
-				DABC84C420DF244E00ACA205 /* instructions.txt */,
-				DABC84C520DF244E00ACA205 /* intro.txt */,
-				DABC84C620DF244E00ACA205 /* map.txt */,
-				DABC84C820DF244F00ACA205 /* menuGFX.txt */,
+				DABC84E820DF7CD300ACA205 /* class.txt */,
+				DABC84E520DF7C3900ACA205 /* charCreation.txt */,
+				DABC84E220DF7C3900ACA205 /* instructions.txt */,
+				DABC84E120DF7C3900ACA205 /* intro.txt */,
+				DABC84E320DF7C3900ACA205 /* map.txt */,
+				DABC84E620DF7C3900ACA205 /* menuGFX.txt */,
+				DABC84E720DF7C3A00ACA205 /* ruins.txt */,
 			);
 			path = Story;
 			sourceTree = "<group>";

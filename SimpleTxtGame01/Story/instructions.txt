@@ -5,6 +5,7 @@ MOVE(N/S/E/W):  Through these commands you can choose to move in any direction, 
 ATTACK:         Allows you to attack enemies if you are in combat.
 TALK(1/2/3/4):  Can choose to talk to other NPCs using selected dialogue.
 INVENTORY:      Through this you can access your inventory of items on your person.
+STATS:          Prints out character data to the screen.
 SAVE:           Saves data at your current location.
 QUIT:           Saves and quits the game.
 HELP:           Allows you to view all possible commands again.

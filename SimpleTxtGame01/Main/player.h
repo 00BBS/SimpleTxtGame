@@ -18,14 +18,15 @@
 
 void playerDet(char *name);
 void playerAction(void);
+void playerClass(void);
 
 // Health - The amount of health the player has left. Cannot be less than 0.
 // Money  - The total amount of money the player has left, which they can use to purchase various items.
 // Area   - The current location of the player.
 
 typedef enum RPGClass{
-    WIZARD,
     JESTER,
+    WIZARD,
     KNIGHT,
     RANGER
 }classType;
