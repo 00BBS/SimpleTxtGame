@@ -19,6 +19,7 @@
 void playerDet(char *name);
 void playerAction(void);
 void playerClass(void);
+void classSelect(void);
 
 // Health - The amount of health the player has left. Cannot be less than 0.
 // Money  - The total amount of money the player has left, which they can use to purchase various items.

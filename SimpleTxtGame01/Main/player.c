@@ -15,15 +15,52 @@
 
 void playerPrint(struct character *p);
 
-
+// function which prints out the instructions for choosing a class.
 void playerClass(void){
-    char *select = "class.txt";
+    char *c1 = "class.txt";
+    char *c2 = "class2.txt";
+    
     int  c;
+    
     c = getchar();
-    readFile(select);
+    // read the story
+    readFile(c1);
     c = getchar();
+    readFile(c2);
+    classSelect();
     
 }
+
+// Recursive function which prompts the user to choose a valid class.
+void classSelect(void){
+    int class;
+    char c;
+    
+    scanf("%d", &class);
+    
+    switch(class){
+        case JESTER :
+            printf("Jester has been selected.\n");
+            break;
+        case WIZARD :
+            printf("Wizard has been selected.\n");
+            break;
+        case KNIGHT :
+            printf("Knight has been selected.\n");
+            break;
+        case RANGER :
+            printf("Ranger has been selected.\n");
+            break;
+        default:
+            if(class != '\n'){
+                printf("Please enter a valid response\n");
+            }
+            classSelect();
+    }
+    scanf("%c", &c);
+}
+
+
 
 // Function which assigns all details of the character in both a struct and a .txt file
 void playerDet(char *playerName){
@@ -40,8 +77,6 @@ void playerPrint(struct character *p){
     printf("HEALTH: %lf\n", p->health);
     printf("MONEY:  %d gold\n", p->money);
 }
-
-
 
 void playerAction(void){
     

@@ -45,6 +45,7 @@
 		DABC84E620DF7C3900ACA205 /* menuGFX.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = menuGFX.txt; sourceTree = "<group>"; };
 		DABC84E720DF7C3A00ACA205 /* ruins.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ruins.txt; sourceTree = "<group>"; };
 		DABC84E820DF7CD300ACA205 /* class.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = class.txt; sourceTree = "<group>"; };
+		DABC84FC20E09EFD00ACA205 /* class2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = class2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				DABC84E820DF7CD300ACA205 /* class.txt */,
+				DABC84FC20E09EFD00ACA205 /* class2.txt */,
 				DABC84E520DF7C3900ACA205 /* charCreation.txt */,
 				DABC84E220DF7C3900ACA205 /* instructions.txt */,
 				DABC84E120DF7C3900ACA205 /* intro.txt */,

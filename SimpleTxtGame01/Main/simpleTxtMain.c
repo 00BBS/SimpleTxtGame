@@ -177,7 +177,7 @@ int characterCreation(void){
     
     
     printf("Well %s, are you ready to step into the STG world?\nToo late.... you don't have a choice.\n",name);
-    printf("Actually you could probably just type QUIT but oh well.\n            Press any key to continue...\n");
+    printf("Actually you could probably just type QUIT but oh well.\nPress any key to continue...\n");
     scanf("%c", &c);
     
     
