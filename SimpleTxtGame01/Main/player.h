@@ -16,10 +16,10 @@
 #define STARTING_CASH   1000
 
 
-void playerDet(char *name);
+void playerDet(char *name, int classType);
 void playerAction(void);
 void playerClass(void);
-void classSelect(void);
+int classSelect(void);
 
 // Health - The amount of health the player has left. Cannot be less than 0.
 // Money  - The total amount of money the player has left, which they can use to purchase various items.
@@ -37,6 +37,7 @@ typedef struct character {
     char   name[MAX_NAME_LENGTH];
     float  health;
     int    money;
+    char*  classType;
     struct inventory *inventory;
     struct area *area;
 }player;

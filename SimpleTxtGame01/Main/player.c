@@ -27,12 +27,10 @@ void playerClass(void){
     readFile(c1);
     c = getchar();
     readFile(c2);
-    classSelect();
-    
 }
 
 // Recursive function which prompts the user to choose a valid class.
-void classSelect(void){
+int classSelect(void){
     int class;
     char c;
     
@@ -58,16 +56,40 @@ void classSelect(void){
             classSelect();
     }
     scanf("%c", &c);
+    
+    return class;
 }
 
-
+// Function which interprets the class from enumeration
+char* getClass(int classType){
+    char* playerClass;
+    switch(classType){
+        case JESTER :
+            playerClass = "Jester";
+            break;
+        case WIZARD :
+            playerClass = "Wizard";
+            break;
+        case KNIGHT :
+            playerClass = "Knight";
+            break;
+        case RANGER :
+            playerClass = "Ranger";
+            break;
+    }
+    return playerClass;
+}
 
 // Function which assigns all details of the character in both a struct and a .txt file
-void playerDet(char *playerName){
+void playerDet(char *playerName, int classType){
     struct character *p = malloc(sizeof(struct character));
+    char*  playerClass;
     strcpy(p->name, playerName);
     p->health = MAX_HEALTH;
     p->money  = STARTING_CASH;
+    //Get class and assign it to user struct
+    playerClass = getClass(classType);
+    p->classType = playerClass;
 }
 
 
@@ -76,6 +98,7 @@ void playerPrint(struct character *p){
     printf("NAME:   %s\n", p->name);
     printf("HEALTH: %lf\n", p->health);
     printf("MONEY:  %d gold\n", p->money);
+    printf("CLASS:  %s\n", p->classType);
 }
 
 void playerAction(void){

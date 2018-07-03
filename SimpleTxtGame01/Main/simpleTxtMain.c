@@ -134,6 +134,7 @@ int characterCreation(void){
     char honorific[] = "placeholder";
     
     int qFlag = 0;
+    int class = 0;
     char c;
     
     FILE *fp;
@@ -172,7 +173,8 @@ int characterCreation(void){
     
     // ask the player to choose their class
     playerClass();
-    playerDet(name);
+    class = classSelect();
+    playerDet(name, class);
     
     
     
